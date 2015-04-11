@@ -1,38 +1,17 @@
-{{! This is a custom template page associated to the /projects static page.}}
-{{! If you want to have something similar, make sure you modify its content.}}
-
 {{!< default}}
 
 <main role="main">
     <article class="{{post_class}}" role="article" itemscope itemtype="http://schema.org/Article">
 
+        {{! In the Teaching page display only the title and the content}}
         {{#post}}
-        <h1 class="post-title">{{title}}</h1>
 
-        {{! Here goes the description of the projects static page. The content of the post is used for this. }}
-        <section class="post-content projects-content">
+        <h1 class="post-title">{{{title}}}</h1>
+        <section class="post-content">
             {{content}}
         </section>
 
-        {{! Here go the static pages. Make sure you modify the links of the pages and their titles. }}
-        <p class="project-page">
-            <span class="project-title" itemprop="headline">
-                <a href="#">
-                    <span class="project-name">Project 1</span>
-                    <span class="project-description">short description for project 1</span>
-                </a>
-            </span>
-        </p>
-        <p class="project-page">
-            <span class="project-title" itemprop="headline">
-                <a href="#">
-                    <span class="project-name">Project 2</span>
-                    <span class="project-description">short description for project 2</span>
-                </a>
-            </span>
-        </p>
-
-         <footer class="post-footer">
+        <footer class="post-footer">
             <section class="share">
                 <h4 class="post-share">Share this page</h4>
                 <ul>
